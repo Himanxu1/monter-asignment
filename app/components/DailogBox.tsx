@@ -2,10 +2,10 @@
 import Image from 'next/image'
 import closeBox from '../../utils/assets/close.png'
 import filter from '../../utils/assets/filter.png'
-
 import ReportTable from './Table'
 
-const DailogBox  = ({close}) => {
+
+const DailogBox  = ({close}:{ close: () => void}) => {
   
   return (
     <div className="fixed inset-0 z-10 overflow-y-auto bg-gray-500 bg-opacity-75 flex justify-center items-center">

@@ -4,8 +4,8 @@ import right from '../../utils/assets/right.png'
 import left from '../../utils/assets/back.png'
 import Image from 'next/image'
 import { data } from '@/utils/Data'
-import {useState} from 'react';
 import Dropdown from './Dropdown'
+import React, { ChangeEvent ,useState} from 'react';
 
 const ReportTable = () => {
     const [currentPage, setCurrentPage] = useState<Number>(1);
@@ -14,21 +14,20 @@ const ReportTable = () => {
    
     const indexOfLastReport = currentPage * reportperpage;
     const indexOfFirstReport = indexOfLastReport - reportperpage;
-    const currentReport = data.slice(indexOfFirstReport, indexOfLastReport);
 
-    const handleChange = (event) => {
+
+    const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         const selectedValue = event.target.value;
-        setReportperpage(selectedValue)
-      };
-    
-    
-     const paginate = (pageNumber:number) => setCurrentPage(pageNumber);   
+        setReportperpage(selectedValue);
+    };
+
+    const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
     const nextPage = () => {
         if (currentPage < Math.ceil(data.length / reportperpage)) {
-          setCurrentPage(currentPage + 1);
+            setCurrentPage(currentPage + 1);
         }
-      };
+    };
     
       const prevPage = () => {
         if (currentPage > 1) {

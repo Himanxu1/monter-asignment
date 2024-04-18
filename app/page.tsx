@@ -20,7 +20,7 @@ export default function Home(){
     onClick={handleShowClick}
     >Show</button>
   {show && (
-        <DailogBox close={closeDialog} />
+        <DailogBox close={closeDialog } />
         )}
     </div>
   );

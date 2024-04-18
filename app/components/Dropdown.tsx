@@ -1,6 +1,6 @@
 
 
-const Dropdown = ({handleChange}) => {
+const Dropdown = ({handleChange}:{handleChange:()=>void}) => {
     const options = [5, 6, 7, 8, 9, 10];
   return (
     <div className="flex items-center ml-6">
