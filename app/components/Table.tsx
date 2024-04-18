@@ -11,9 +11,9 @@ const ReportTable = () => {
     const [currentPage, setCurrentPage] = useState<Number>(1);
    const [reportperpage,setReportperpage] = useState<Number>(5) 
    
-    const indexOfLastReport = currentPage * reportperpage;
-    const indexOfFirstReport = indexOfLastReport - reportperpage;
-    const currentReport = data.slice(indexOfFirstReport, indexOfLastReport);
+    const indexOfLastReport :number= currentPage * reportperpage;
+    const indexOfFirstReport :number= indexOfLastReport - reportperpage;
+    const currentReport:Object = data.slice(indexOfFirstReport, indexOfLastReport);
 
 
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
