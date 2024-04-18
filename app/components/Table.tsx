@@ -8,8 +8,8 @@ import Dropdown from './Dropdown'
 import React, { ChangeEvent ,useState} from 'react';
 
 const ReportTable = () => {
-    const [currentPage, setCurrentPage] = useState<Number>(1);
-   const [reportperpage,setReportperpage] = useState<Number>(5) 
+    const [currentPage, setCurrentPage] = useState<number>(1);
+   const [reportperpage,setReportperpage] = useState<number>(5) 
    
     const indexOfLastReport :number= currentPage * reportperpage;
     const indexOfFirstReport :number= indexOfLastReport - reportperpage;
