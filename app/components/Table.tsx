@@ -13,7 +13,7 @@ const ReportTable = () => {
    
     const indexOfLastReport :number= currentPage * reportperpage;
     const indexOfFirstReport :number= indexOfLastReport - reportperpage;
-    const currentReport:Object = data.slice(indexOfFirstReport, indexOfLastReport);
+    const currentReport = data.slice(indexOfFirstReport, indexOfLastReport);
 
 
   const handleChange = (event: ChangeEvent<HTMLSelectElement>) => {
